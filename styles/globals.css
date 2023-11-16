@@ -1,0 +1,16 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', cursive, sans-serif;
+  }
+  
+
+/* Apply the background gradient to the entire website */
+body {
+    font-family: 'Lato', cursive, sans-serif;
+    background: #0E7EF7; /* Fallback for older browsers */
+    background: linear-gradient(180deg, #0E7EF7 0%, #068BFC 25%, #058BFC 50%, #274DE5 100%);
+}    
+  /* Adjust text color for better contrast on the background */
+  body, .navbar, .footer {
+    color: #e8c9c9; /* Darker text color for better contrast */
+  }
+ 
