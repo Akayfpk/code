@@ -1,99 +1,79 @@
-/* Navbar.module.css */
+/* styles/Navbar.module.css */
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  background-color: transparent !important; /* Override Bootstrap styles */
+  display: flex; 
   align-items: center;
-  padding: 0.5rem 2rem;
 }
-
+.brandIcon {
+  /* Add your styles here */
+  margin-right: 10px; /* Example: Add some space between the icon and the brand text */
+}
 .navbarBrand {
-  font-size: 2.5rem;
-  color: #ffffff;
-  text-decoration: none;
-  margin-right: 2rem;
-}
-
-.navbarToggler {
-  display: none;
-  border: none;
-  background: none;
-  color: #ffffff;
-  font-size: 1.5rem;
-}
-
-.navbarNav {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
-  align-items: center;
-  flex-grow: 1;
-  justify-content: flex-end;
-}
-
-.navItem {
-  margin-right: 1rem; /* Consistent spacing */
+  font-size: 29px;
+  margin-left:70px;
+  color: white; /* Set the color of the brand text */
 }
 
 .navLink {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0.5rem 0;
-  transition: color 0.3s ease;
-  border-bottom: 2px solid transparent;
+  color: white; /* Set the color of the nav link text */
+  padding: 0 5px; /* Adjust padding on each side of nav links */
+  font-size: 13.8px; /* Set font size */
+  text-decoration: none; /* Remove default text decoration */
+  transition: border-bottom 0.09s, background-color 0.09s; /* Smooth transition for the underline and background color */
+  background-color: transparent !important; /* Ensure background is always transparent */
 }
 
-.navLink:hover {
-  color: #dddddd;
-  border-bottom: 2px solid #ffffff;
+.navLink:hover, .navLink:focus {
+  border-bottom: 2px solid white; /* White underline on hover */
+  background-color: transparent !important; /* Force background to remain transparent on hover */
+  color: white !important; /* Maintain text color on hover */
 }
 
-.icon {
-  color: #ffffff;
-  cursor: pointer;
-  padding: 0 1rem;
-  font-size: 1.2rem;
+
+.navItem:last-child {
+  margin-right: 0; /* Remove margin for the last item */
 }
 
-/* Media query for medium screens */
-@media (max-width: 1000px) {
-  .navbarNav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 
-  .navItem {
-    margin-right: 0.5rem; /* Reduced spacing */
-  }
-
-  .navLink {
-    font-size: 0.9rem; /* Smaller font size for nav links */
-  }
-
-  .icon {
-    font-size: 1rem; /* Smaller icons */
-  }
+.navbarToggler {
+  /* Styles for the navbar toggler */
+  border-color: white; /* Example: change the border color */
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .navbarToggler {
-    display: block;
-  }
+.icons {
+  margin-left: 20px; /* Add some space before the icons */
+}
 
-  .navbarNav {
+
+/* Hide icons on small screens (when navbar is collapsed) */
+@media (max-width: 991.98px) {
+  .icons {
     display: none;
   }
-
-  .navbarNav.show {
+}
+@media (min-width: 992px) {
+  .navbarNav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: flex-end; /* Align nav items to the right */
     width: 100%;
-    padding-top: 1rem;
+    align-items: center;
+  }
+ .navItem {
+    /* Adjust as needed for the nav items */
+    margin-left: -70px; /* Adjust the margin to control space between nav items */
   }
 
-  .navItem {
-    width: 100%;
-    text-align: center;
+  .navItem:not(:last-child) {
+    margin-right: auto; /* Push all nav items except the last to the right */
+  }
+  .navItem:first-child {
+    margin-left: 170pt; /* Add space between the brand and the first nav item */
+  }
+  .icons:first-child {
+    margin-right: 55px; /* Add some space before the icons */
+  }
+  .icons:last-child {
+    margin-left: -40px; /* Add some space before the icons */
   }
 }

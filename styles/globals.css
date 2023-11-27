@@ -1,3 +1,7 @@
+.page-wrapper {
+  width: 100%;
+  height: auto;
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', cursive, sans-serif;
   }
@@ -11,6 +15,6 @@ body {
 }    
   /* Adjust text color for better contrast on the background */
   body, .navbar, .footer {
-    color: #e8c9c9; /* Darker text color for better contrast */
+    color: rgb(243, 236, 236); /* Darker text color for better contrast */
   }
  

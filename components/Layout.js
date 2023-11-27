@@ -1,15 +1,14 @@
-// src/components/Layout.js
 import Navbar from './Navbar';
 import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
-    <div className="container">
+    <div className="page-wrapper">
       <Navbar />
-      <main className="mt-5"> {/* Add margin-top for space */}
+      <main className="mt-5">
         {children}
       </main>
-      <Footer className="mt-5" /> {/* Add margin-top for space */}
+      <Footer />
     </div>
   );
 };
