@@ -33,7 +33,7 @@ const ProductDisplay = () => {
           </div>
 
           {/* Price and Actions Section */}
-          <div className="col-8" style={{ order: 3 }}>
+          <div className="col-10" style={{ order: 3 }}>
             <div className={styles.priceRating}>
               <span className={styles.price}>$199.99</span>
               <div className={styles.rating}>
