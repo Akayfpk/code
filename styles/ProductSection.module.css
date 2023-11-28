@@ -1,16 +1,11 @@
 .productSection {
-    /* background: #00b7eb; */
     color: #ffffff;
     padding: 2rem;
-    textAlign: 'center';
-  }
-  
-  .productContent {
-    /* Add styles for layout */
+    text-align: 'center';
   }
   
   .productText {
-    marginBottom: 2rem;
+    margin-bottom: 2rem;
   }
   
   .productTitle {
@@ -18,43 +13,11 @@
     font-weight: bold; /* Adjust as needed */
   }
   
-  
-  .productDescription {
-    /* Add styles for description */
-  }
-  
-  .colorOptions {
-    /* Add styles for color options */
-  }
-  
-  .priceRating {
-    /* Add styles for price and rating */
-  }
-  
-  .price {
-    /* Add styles for price */
-  }
-  
-  .rating {
-    /* Add styles for rating */
-  }
-  
-  .productActions {
-    /* Add styles for action buttons */
-  }
-  
-  .buyNow, .addToCart {
-    /* Add shared styles for buttons */
-  }
-  
-  /* Add specific styles for .buyNow */
-  /* Add specific styles for .addToCart */
-  
   .productImage {
     /* Add your existing styling here */
-    margin-top: 0.5px; /* Decrease the top margin to move the image higher */
-    margin-right: 20px; /* Keep the right margin larger to push the image more to the right */
-    margin-bottom: 150px; /* Adjust the bottom margin as needed */
+    margin-top: 0px; /* Decrease the top margin to move the image higher */
+    margin-right: 0px; /* Keep the right margin larger to push the image more to the right */
+    margin-bottom: 0px; /* Adjust the bottom margin as needed */
     margin-left: 78px; /* Decrease the left margin */
   }
   
@@ -66,6 +29,13 @@
     margin-top: 20px; /* Adjust the margin as needed */
   
     /* Style the buttons */
+  }
+  .colorOption {
+    width: 20px; /* Example width */
+    height: 20px; /* Example height */
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%; /* For circular color options */
   }
   
   .buyNow,
@@ -106,8 +76,6 @@
   align-items: center;
 }
 
-  /* Add specific styles for .buyNow */
-  /* Add specific styles for .addToCart */
   .btnCustom {
     padding: 50px 35px; /* Reduced vertical padding and increased horizontal padding */
   }
@@ -115,10 +83,7 @@
     background-color: rgb(103, 108, 154); /* Light blue for the Buy Now button */
     border-color: #add8e6;
   }
-  .addToCartBtn {
-    /* If you have specific styles for the Add to Cart button, add them here */
-  }
-  /* CSS for ProductSection.module.css */
+ 
 
 /* Filled star */
 .filledStar {
@@ -158,4 +123,17 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   text-align: left; /* Center-align the text */
   margin-bottom: 15px; /* Add some space below the text */
+}
+@media (max-width: 992px) {
+  .myCustomGrid {
+    /* Custom styles for the entire grid on smaller screens */
+    text-align: center; /* Center-aligns text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-aligns flex items horizontally */
+    justify-content: center; /* Center-aligns flex items vertically */
+  }
+  .myCustomGrid .col-md-6, .myCustomGrid .col-md-12 {
+    width: 100%;
+  } 
 }
