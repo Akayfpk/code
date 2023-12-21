@@ -1,13 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Link from 'next/link'; // Add this at the top of your file
 import styles from "../styles/Navbar.module.css";
 
 const Navbar = () => {
-  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [isNavHidden, setIsNavHidden] = useState(false);
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true); 
 
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+  useEffect(() => {
+    const handleScroll = () => {
+      let st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > lastScrollTop){
+         setIsNavHidden(true);
+      } else {
+         setIsNavHidden(false);
+      }
+      setLastScrollTop(st <= 0 ? 0 : st);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollTop]);
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-light ${styles.navbar}`}>
+    <nav className={`navbar navbar-expand-lg navbar-light ${styles.navbar} ${isNavHidden ? styles.navbarHidden : ''}`}>
+  
       <div className="container-fluid">
         <a className={`navbar-brand ${styles.navbarBrand}`} href="#">
         <svg className={styles.brandIcon} fill="#f8f7f7" xmlns="http://www.w3.org/2000/svg" width="30" height="50" viewBox="0 0 35 45">
@@ -41,23 +61,25 @@ const Navbar = () => {
         <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNav">
           <ul className={`navbar-nav ${styles.navbarNav}  ${styles.navLinkActive}`}>
                       <li className={`nav-item ${styles.navItem}`}>
-                            <a className={`nav-link ${styles.navLink}`} href="#">HOME</a>
+                            <span className={`nav-link ${styles.navLink}`} href="#">HOME</span>
                        </li>
+                       <li className={`nav-item ${styles.navItem}`}>
+                      <Link href="components/Collection.js">
+                           <span className={`nav-link ${styles.navLink}`}>COLLECTION</span>
+                              </Link>     
+                    </li>
                       <li className={`nav-item ${styles.navItem}`}>
-                           <a className={`nav-link ${styles.navLink}`} href="#">COLLECTION</a>
+                          <span className={`nav-link ${styles.navLink}`} href="#">GALLERY</span>
                       </li>
                       <li className={`nav-item ${styles.navItem}`}>
-                          <a className={`nav-link ${styles.navLink}`} href="#">GALLERY</a>
+                          <span className={`nav-link ${styles.navLink}`} href="#">CONTACT</span>
                       </li>
                       <li className={`nav-item ${styles.navItem}`}>
-                          <a className={`nav-link ${styles.navLink}`} href="#">CONTACT</a>
-                      </li>
-                      <li className={`nav-item ${styles.navItem}`}>
-                          <a className={`nav-link ${styles.navLink}`} href="#">ABOUT</a>
+                          <span className={`nav-link ${styles.navLink}`} href="#">ABOUT</span>
 
                       </li>
                       <li className="nav-item">
-                      <a className={`nav-link ${styles.icons}`}>
+                      <span className={`nav-link ${styles.icons}`}>
                           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -73,11 +95,11 @@ const Navbar = () => {
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
 
-                          </a>
+                          </span>
 
                       </li>
                       <li className="nav-item">
-                      <a className={`nav-link ${styles.icons}`}>
+                      <span className={`nav-link ${styles.icons}`}>
                           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -95,7 +117,7 @@ const Navbar = () => {
             <line x1="3" y1="6" x2="3" y2="6" />
           </svg>
 
-                          </a>
+                          </span>
 
                       </li>
                   </ul>

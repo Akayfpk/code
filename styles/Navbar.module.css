@@ -4,6 +4,9 @@
   background-color: transparent !important; /* Override Bootstrap styles */
   display: flex; 
   align-items: center;
+  position: sticky;
+  top: 0;
+  transition: background-color 0.5s ease;
 }
 .brandIcon {
   /* Add your styles here */
@@ -20,6 +23,7 @@
   padding: 0 5px; /* Adjust padding on each side of nav links */
   font-size: 13.8px; /* Set font size */
   text-decoration: none; /* Remove default text decoration */
+  justify-content: space-between;
   transition: border-bottom 0.09s, background-color 0.09s; /* Smooth transition for the underline and background color */
   background-color: transparent !important; /* Ensure background is always transparent */
 }
@@ -42,7 +46,7 @@
 }
 
 .icons {
-  margin-left: 20px; /* Add some space before the icons */
+  justify-content: space-evenly;
 }
 
 
@@ -76,4 +80,12 @@
   .icons:last-child {
     margin-left: -40px; /* Add some space before the icons */
   }
+}
+
+.navbarScrolled {
+  background-color: transparent;
+}
+.navbarHidden {
+  transform: translateY(-100%);
+  transition: transform 0.9s ease;
 }

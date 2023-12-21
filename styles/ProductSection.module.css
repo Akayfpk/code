@@ -1,61 +1,95 @@
+/* Mobile-first styles */
 .productSection {
     color: #ffffff;
     padding: 2rem;
     text-align: 'center';
   }
   
-  .productText {
-    margin-bottom: 2rem;
+/* Style for product titles */
+.productTitle, .h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #FFFFFF; 
+  text-shadow: 0.5px 0.3px 0.4px rgb(103, 108, 154);
+  text-align: left; 
+  margin-bottom: 0.5px; 
+}
+
+/* Style for product subtitles */
+.productSubtitle, .h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #FFFFFF; 
+  text-shadow: 0.6px 0.5px 0.4px rgb(103, 108, 154);
+  text-align: left; 
+  margin-bottom: 25px; 
+  white-space: wrap; 
+}
+
+/* Style for product descriptions */
+.productDescription, .h3 {
+  font-size: 16px;
+  color: #ffff; 
+  text-shadow: 0.2px 0.2px 0.4px rgba(0, 0, 0, 0.2);
+  text-align: left; 
+  margin-bottom: -15px; 
   }
-  
-  .productTitle {
-    font-size: 2.5rem; /* Adjust as needed */
-    font-weight: bold; /* Adjust as needed */
-  }
+ 
   
   .productImage {
-    /* Add your existing styling here */
-    margin-top: 0px; /* Decrease the top margin to move the image higher */
-    margin-right: 0px; /* Keep the right margin larger to push the image more to the right */
-    margin-bottom: 0px; /* Adjust the bottom margin as needed */
-    margin-left: 78px; /* Decrease the left margin */
+    margin-top: 0px; 
+    margin-right: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 40px; 
+    width: 20vw;
   }
   
   
-  .productActions {
-    /* Add styles for action buttons */
-    display: flex;
-    justify-content: space-between; /* This will separate the buttons */
-    margin-top: 20px; /* Adjust the margin as needed */
-  
-    /* Style the buttons */
-  }
+
   .colorOption {
-    width: 20px; /* Example width */
-    height: 20px; /* Example height */
+  
+    border: 1px solid #ffffff; 
+    border-radius: 50%; 
+    padding: 10px; 
+    width: 20px; 
+    height: 20px; 
     display: inline-block;
     margin-right: 10px;
-    border-radius: 50%; /* For circular color options */
+    border-radius: 50%; 
+    }
+  /* Filled star */
+.filledStar {
+  color: rgba(240, 240, 60, 0.836);
   }
-  
+
+/* Unfilled star */
+  .productActions {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+    margin-left: 5.8vh;
+  }
   .buyNow,
 .addToCart {
-  padding: 5px 30px; /* Reduced padding for thinness, increased for width */
+  margin-left: auto;
+  padding: 5px 30px; 
   font-size: 1.2rem;
+  justify-content: space-between;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease; /* Optional: Adds a smooth transition effect for hover states */
+  transition: all 0.3s ease; 
 }
 .buyNow {
-  background-color: #06a7ee; /* Lighter blue color */
+  margin-left: auto;
+  background-color: #06a7ee; 
   color: #fff;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 10px 20px;
   font-size: 0.8rem;
   cursor: pointer;
-  width: 150px;
+  width: 130px;
   height: 40px;
-  text-align: center; /* Center-align the text horizontally */
+  text-align: center; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,75 +99,203 @@
   background-color: transparent;
   color: rgb(234, 238, 249);
   border: 2px solid rgb(230, 233, 243);
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 10px 20px;
   font-size: 0.8rem;
-  width: 150px;
+  width: 130px;
   height: 40px;
-  text-align: center; /* Center-align the text horizontally */
+  text-align: center; 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-  .btnCustom {
-    padding: 50px 35px; /* Reduced vertical padding and increased horizontal padding */
+
+
+
+.productImage {
+    margin-right: 0%;
   }
-  .buyNowBtn {
-    background-color: rgb(103, 108, 154); /* Light blue for the Buy Now button */
-    border-color: #add8e6;
+
+.seeMoreButton {
+  text-decoration: none;
+  position: absolute;
+  bottom: -11.3%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: buttonHover 1s infinite;
+  -webkit-animation: buttonHover 3.9s infinite;
+  -moz-animation: buttonHover 1s infinite;
+  min-width: 16vh;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes buttonHover {
+  0% {
+    transform: scale(1) translateX(-50%);
   }
+  50% {
+    transform: scale(1.1) translateX(-50%);
+    background-color: #44aaed;
+  }
+  100% {
+    transform: scale(1) translateX(-50%);
+  }
+}
+
+.arrowContainer {
+  position: relative;
+  width: 9px;
+  height: 10px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowContainer img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.arrowContainer img:first-child {
+  top: .44px;
+}
+
+.arrowContainer img:last-child {
+  top: 3.47px;
+}
+
+
+@media (min-width: 601px) {
+  .productTitle,
+  .productSection,
+  .productDescription,
+  .productSubtitle,
+  .productImage
+   {
+  position: relative;
+  right: -5%;
+  }
+  .colorOptions,
+  .priceRating
+   {
+    position: static;
+    left:10%
+  }
+
+  .productSection {
+    padding: 3rem;
+  }
+
+  .productTitle, .h1 {
+    font-size: 60px;
+    text-align: left;
+  }
+
+  .productSubtitle, .h2 {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .productDescription, .h3 {
+    font-size: 18px;
+    text-align: left;
+    max-width: 50%;
+  }
+  
+  .productImage {
+  position: absolute;
+  bottom: -8px;
+  right: 200px;
+  width: 200px;
+  }
+ .colorOptions {
+  position: absolute;
+  bottom: 0%;
+  left: 9%;
+ }
+ .priceRating{
+  position: absolute;
+  bottom: -16%;
+  font-size: 1.2rem;
+   left: 9%;
+ }
+  .buyNow,
+  .addToCart {
+    padding: 5px 10px; 
+    border-radius: 8%;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: -35%;
+  }
+
+  .buyNow {
+    
+    white-space: nowrap; 
+    position: absolute;
+    left: 8%;
+    
+  }
+  .addToCart {
+   
+    left: 23%;
+    
+  }
+  .seeMoreButton {
+    position: absolute;
+    bottom: -60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+  }
+  
+}
+@media (min-width: 700px) and (max-width: 900px) {
  
-
-/* Filled star */
-.filledStar {
-  color: rgba(240, 240, 60, 0.836);/* Set the color to yellow or your desired color */
-}
-
-/* Unfilled star */
-
-/* Style for product titles */
-.productTitle, .h1 {
-  font-size: 60px;
-  font-weight: bold;
-  color: #FFFFFF; /* White text color */
-  text-shadow: 0.5px 0.8px 0.4px rgb(103, 108, 154);
-  text-align: left; /* Center-align the text */
-  margin-bottom: 0.5px; /* Add some space below the text */
-}
-
-/* Style for product subtitles */
-.productSubtitle, .h2 {
-  font-size: 32px;
-  font-weight: bold;
-  color: #FFFFFF; /* White text color */
-  text-shadow: 0.8px 1px 0.4px rgb(103, 108, 154);
-  text-align: left; /* Center-align the text */
-  margin-bottom: 25px; /* Add some space below the text */
-  white-space: nowrap; /* Prevent text from wrapping to the next line */
-  overflow: hidden; /* Hide any overflow text */
-  text-overflow: ellipsis; /* Add ellipsis (...) for overflow text */
-}
-
-/* Style for product descriptions */
-.productDescription, .h3 {
-  font-size: 10px;
-  font-style: italic; /* Use font-style for italic text */
-  color: #FFFFFF; /* White text color */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  text-align: left; /* Center-align the text */
-  margin-bottom: 15px; /* Add some space below the text */
-}
-@media (max-width: 992px) {
-  .myCustomGrid {
-    /* Custom styles for the entire grid on smaller screens */
-    text-align: center; /* Center-aligns text */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center-aligns flex items horizontally */
-    justify-content: center; /* Center-aligns flex items vertically */
+  .addToCart {
+    left: 28%;
   }
-  .myCustomGrid .col-md-6, .myCustomGrid .col-md-12 {
-    width: 100%;
-  } 
+  .seeMoreButton{
+    width: 15%;
+    font-size: 12px;
+  }
+}
+@media (min-width: 600px) and (max-width: 700px)
+{
+  .addToCart {
+    left: 31%;
+  }
+  .seeMoreButton{
+    width: 15%;
+    font-size: 12px;
+  }
+  .productImage {
+    position: absolute;
+    left: 40%;
+  }
+  .productTitle,.productDescription,.productSubtitle {
+    
+    left: 1.9%;
+  }
+  .productTitle {
+    font-size: 38px;
+  }
+  .productDescription{
+    font-size: 18px;
+  }
+  .productSubtitle {
+    font-size: 23px;
+  }
+}
+@media (min-width: 300px) and (max-width: 400px)
+{
+.seeMoreButton{
+  width: 25%;
+  font-size: 12px;
+} 
 }
