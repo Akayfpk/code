@@ -1,1 +1,15 @@
+# My Awesome Project
+
+Welcome to my awesome project! This project is inspired by the design on Dribbble, and it's my attempt at turning UX designs into functional websites.
+
+![Dribbble Design](images/dribbble_design.png)
+
+I found this amazing design on Dribbble and thought I'd give it a shot at coding:
+
+![SitStyle Design](public/SitStyle.png)
+
+## Installation
+
+...
+
 
