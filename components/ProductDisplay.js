@@ -15,10 +15,11 @@ const ProductDisplay = () => {
             <h1 className={styles.productTitle}>Costway</h1>
             <h2 className={styles.productSubtitle}>Mid-Century Accent Chair</h2>
             <p className={styles.productDescription}>
-              The Rivet Julie Mid-Century Modern Chair combines sleek design
-              with comfort. It's clean lines and sturdy construction make it
-              an ideal choice for any modern living space.
+            The Rivet Julie Mid-Century Modern Chair combines sleek design
+            with comfort. It&rsquo;s clean lines and sturdy construction make it
+            an ideal choice for any modern living space.
             </p>
+
           
           {/* Image Section */}
           
