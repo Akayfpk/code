@@ -4,7 +4,7 @@ Welcome to my awesome project! This project is inspired by the design on Dribbbl
 
 I found this amazing design on Dribbble and thought I'd give it a shot at coding:
 
-![SitStyle Design](public/SitStyle.png)
+![SitStyle Design](Ui-Ux-Test/Code/public/SitStlye.png)
 
 ## Installation
 
