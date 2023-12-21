@@ -294,6 +294,9 @@
 }
 @media (min-width: 300px) and (max-width: 400px)
 {
+  .buyNow,.addToCart {
+    width: 80pt;
+  }
 .seeMoreButton{
   width: 25%;
   font-size: 12px;
